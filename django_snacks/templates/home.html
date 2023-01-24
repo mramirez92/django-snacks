@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Favorite snacks home page</h1>
+    {% for food in snacks %}
+        <h2>{{food.title }}</h2>
+        <img src="{{food.image}}" alt="{{food.title}}">
+        <p>Description: {{ food.desc }}</p>
+    {% endfor %}
+{% endblock %}
